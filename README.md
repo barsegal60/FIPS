@@ -3,7 +3,9 @@
 1. [Boost:](#boost)
    - [Download and Install:](#boost_download_and_install)
    - [Integration to Visual Studio Project:](#integration)
- 2. [OpenSSL:](#openssl)  
+2. [OpenSSL:](#openssl)  
+   - [OpenSSL guide](#openssl_guide)
+   - [Prbolems & Solutions](#openssl_problems_solutions)
 
 _______
 ### Boost: Download and Install ###
@@ -60,9 +62,30 @@ https://www.youtube.com/watch?v=5afpq2TkOHc
   6. Go to Linker -> General and add the path “C:\Program Files\boost_1_72_0\stage\lib” to  Additional Library Directories
       - ![](README-pictures/boost10.PNG)<br />
 
+### OpenSSL guide: ###
+<a name="openssl"/>
+<a name="openssl_guide"/>
 
-   
+https://nextbigthings.info/secured-tls-connection-using-boost-asio-and-openssl-for-windows/ <br /> <br />
+This guide explains how to download and  install OpenSSL. <br />
+Moreover, it shows how to integrate OpenSSL library into an example of a boost ssl client and server project,<br /> the same example as we used. <br />
+
+for more info checkout OpenSSL installation guide: <br /> 
+
+https://github.com/openssl/openssl/blob/master/INSTALL.md#building-openssl
 
 
+### Problems & Solutions ###
+<a name="openssl_problems_solutions"/>
 
+This section overview problems we encountered and solutions: </br>
 
+1. Problem: Linking errors
+![](README-pictures/openssl1.PNG)<br />
+
+Solution: <br />
+![](README-pictures/openssl2.JPG)
+
+2. 
+Problem & Solution: </br>
+![](README-pictures/openssl3.PNG)
