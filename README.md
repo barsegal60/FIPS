@@ -11,14 +11,14 @@ _______
 ### Boost: Download and Install ###
 <a name="boost"/>
 <a name="boost_download_and_install"/>
-1. Download boost 1.72 library from: https://www.boost.org/users/history/version_1_72_0.html<br />
-2. Extract boost folder into: C:\Program Files<br />
-3. Open x64 VS 2017 CMD as Administrator(important) <br />
+1. Download boost 1.72 library from: https://www.boost.org/users/history/version_1_72_0.html <br />
+2. Extract boost folder into: C:\Program Files <br />
+3. Open x64 VS 2017 CMD <b> as Administrator (important) </b><br />
 4. Enter the following commands:
 
    - “bootstrap vc141” - (vc141 for visual studio 2017 version)<br />
      ![](README-pictures/boost1.PNG)
-   - “b2” - (building boost libraries)<br />
+   - “b2” - (for building boost libraries)<br />
       ![](README-pictures/boost2.PNG)
       
 5. Add boost to environment variables:
@@ -55,7 +55,7 @@ https://www.youtube.com/watch?v=5afpq2TkOHc
 
   1. Open your project in visual studio <br />
   2. Right click on your project -> properties <br />
-  3. Set configuration to All configuration!important! <br />
+  3. Set configuration to <b> All configuration! important! </b> <br />
   4. Go to Configuration properties -> VC++ Directories, add the path: “C:\Program Files\boost_1_72_0”  to Include directories and to library directories
       -  ![](README-pictures/boost8.PNG)<br />
   5. Go to C/C++ General and add “C:\Program Files\boost_1_72_0”  to Additional Include Directories, and set SDL checks to No.
