@@ -23,9 +23,9 @@ _______
       
 5. Add boost to environment variables:
 
-   - Add new environment variable named “include” and for it’s value insert boost library path (C:\Program Files\boost_1_72_0)<br />
-     ![](README-pictures/boost3.PNG)
-   - Add another environment variable named “LIB” and enter it it’s value to be : C:\Program Files\boost_1_72_0\stage\lib
+   - Add new environment variable named “include” and for it’s value insert boost library path (C:\Program Files\boost_1_72_0 )<br />
+     ![](README-pictures/boost3.PNG) )<br />
+   - Add another environment variable named “LIB” and enter it it’s value to be : C:\Program Files\boost_1_72_0\stage\lib <br />
      ![](README-pictures/boost4.PNG)<br />
 Note: the path in the pictures above should be set  as described in 1,2 above.<br />
  6. Build boost libraries:
