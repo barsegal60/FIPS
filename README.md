@@ -152,3 +152,26 @@ Solution: Add the following two #pragma commands <br />
 3. Run the project and make sure “wolfssl.lib” file has been created.
 ![](README-pictures/wolfssl2.PNG)<br />
 
+## Integration to Visual Studio Project: ##
+<a name="integration_wolfssl"/>
+
+1. Go to Project -> Nuget packages -> Browse <br />
+2. Download & install “pthreads” package.<br />
+3. Head to project properties -> C/C++ -> General and add:<br />
+    - C:\cygwin64\home\RonyBartov\wolfssl-5.2.0-gplv3-fips-ready\wolfssl<br />
+    - C:\cygwin64\home\RonyBartov\wolfssl-5.2.0-gplv3-fips-ready<br />
+    - C:\Program Files\Boost\boost_1_72_0<br />
+ ![](README-pictures/openssl3.JPG)
+ 4. Go to Linker -> General -> Additional Library Directories and make sure the path “C:\Program Files\boost_1_72_0\stage\lib” is added.
+ 5. Go to Linker -> Input -> Additional Dependencies and add the path of the file that you have generated at step 3.
+  ![](README-pictures/openssl3.JPG)
+  
+## Prbolems & Solutions: ##
+<a name="wolfssl_problems_solutions"/>
+1. When running the project after installing the ”pthreads” package we encountered redefinition errors that has been occured from the file “pthread.h”.<br />
+   We assumed this happened because the  file might be included from 2 different sources.<br />
+   Solution: We solved the problem by deleting the file pthread.h content.
+  
+
+
+
