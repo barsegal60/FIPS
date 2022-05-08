@@ -160,11 +160,11 @@ Solution: Add the following two #pragma commands <br />
 3. Head to project properties -> C/C++ -> General and add:<br />
     - C:\cygwin64\home\RonyBartov\wolfssl-5.2.0-gplv3-fips-ready\wolfssl<br />
     - C:\cygwin64\home\RonyBartov\wolfssl-5.2.0-gplv3-fips-ready<br />
-    - C:\Program Files\Boost\boost_1_72_0<br />
- ![](README-pictures/openssl3.JPG)
+    - C:\Program Files\Boost\boost_1_72_0
+ ![](README-pictures/c.JPG)<br />
  4. Go to Linker -> General -> Additional Library Directories and make sure the path “C:\Program Files\boost_1_72_0\stage\lib” is added.
  5. Go to Linker -> Input -> Additional Dependencies and add the path of the file that you have generated at step 3.
-  ![](README-pictures/openssl3.JPG)
+ ![](README-pictures/linker_general.JPG)<br />
   
 ## Prbolems & Solutions: ##
 <a name="wolfssl_problems_solutions"/>
