@@ -6,8 +6,17 @@
 2. [OpenSSL:](#openssl)  
    - [OpenSSL guide](#openssl_guide)
    - [Prbolems & Solutions](#openssl_problems_solutions)
+3. [WolfSSL:](#wolfssl)  
+   - [Prerequisites:](#prerequisites)
+   - [Download & Install:](#wolfssl_download_and_install)
+   - [Build & Configuration:](#build_and_config)
+   - [Integration to Visual Studio Project:](#integration_wolfssl)
+   - [Prbolems & Solutions](#wolfssl_problems_solutions)
 
 _______
+# Boost: #
+<a name="boost"/>
+
 ### Boost: Download and Install ###
 <a name="boost"/>
 <a name="boost_download_and_install"/>
@@ -62,9 +71,10 @@ https://www.youtube.com/watch?v=5afpq2TkOHc
       -  ![](README-pictures/boost9.PNG)<br />
   6. Go to Linker -> General and add the path “C:\Program Files\boost_1_72_0\stage\lib” to  Additional Library Directories
       - ![](README-pictures/boost10.PNG)<br />
+# OpenSSL: #
+<a name="openssl"/>
 
 ### OpenSSL guide: ###
-<a name="openssl"/>
 <a name="openssl_guide"/>
 
 https://nextbigthings.info/secured-tls-connection-using-boost-asio-and-openssl-for-windows/ <br /> <br />
@@ -93,4 +103,52 @@ Solution: Add the following two #pragma commands <br />
 3. Problem: failing to use OpenSSL commands in CMD </br>
    Solution: add OPENSSL_CONF variable to environment variables with the path of \your openssl-master folder\apps\openssl.cnf 
    ![](README-pictures/openssl4.PNG)
+
+# WolfSSL: #
+<a name="wolfssl"/>
+
+## Prerequisites: ## 
+<a name="prerequisites"/>
+
+
+### Cygwin: ###
+
+1. Download & Install Cygwin from the "Cygwin" section in the following link:
+   https://www.wolfssl.com/documentation/wolfssl-manual/chapter02.html 
+2. Follow 1-11 instructions.
+
+## Download & Install: ##
+<a name="wolfssl_download_and_install"/>
+
+1. Download wolfssl-5.3.0-gplv3-fips-ready.zip edition from: https://www.wolfssl.com/download/
+2. Unzip the folder to the following path: C:\cygwin64\home\\*user_name*
+3. Open cygwin <b> as administrator </b> and cd to C:\cygwin64\home\user_name\wolfssl-5.3.0-gplv3-fips-ready
+4. Follow next steps in the following guide: https://www.wolfssl.com/docs/fips-ready-user-guide/
+
+## Build & Configuration: ##
+<a name="build_and_config"/>
+
+1. Open the project solution “wolfssl64.sln” that is located in your installation folder.
+2. Open user_setting.h file and insert the following macros:
+   #define OPENSSL_EXTRA
+   #define HAVE_THREAD_LS
+   #define WOLFSSL_KEY_GEN
+   #define HAVE_AESGCM
+   #define HAVE_HASHDRBG
+   #define WOLFSSL_SHA384
+   #define WOLFSSL_SHA512
+   #define NO_PSK
+   #define NO_RC4
+   #define NO_DSA
+   #define NO_MD4
+   #define HAVE_EX_DATA
+   #define OPENSSL_ALL
+   #define WOLFSSL_ASIO
+   #define ASIO_USE_WOLFSSL
+   #define BOOST_ASIO_USE_WOLFSSL
+   
+![](README-pictures/wolfssl1.PNG)<br />
+
+3. Run the project and make sure “wolfssl.lib” file has been created.
+![](README-pictures/wolfssl2.PNG)<br />
 
